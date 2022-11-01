@@ -1,0 +1,85 @@
+@import "_variables";
+@import "_mixins";
+
+.content {
+  &__container {
+    margin-top: 50px;
+    margin-bottom: 190px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__sidebar {
+    margin-right: 30px;
+    max-width: 350px;
+    padding: 20px 30px;
+    background-color: $colorGrey;
+  }
+  &__sidebar-title {
+    @include text(40px, 46px, 800, $colorWhite);
+  }
+  &__sidebar-list {
+    margin-top: 30px;
+  }
+  &__sidebar-item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  &__sidebar-link {
+    display: flex;
+    flex-direction: column;
+  }
+  &__sidebar-span-date {
+    font-style: italic;
+    @include text(14px, 20px, 400, $colorWhite);
+  }
+  &__sidebar-span-descr {
+    @include text(14px, 20px, 400, $colorWhite);
+  }
+  &__sidebar-bottom {
+    margin-top: 70px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__sidebar-bottom-link {
+    @include text(14px, 20px, 400, $colorWhite);
+    text-decoration: underline;
+  }
+  &__center {
+    max-width: 571px;
+  }
+  &__top-title {
+    margin-top: 22px;
+    margin-bottom: 30px;
+    @include text(33px, 40px, 400, $colorGrey);
+  }
+  &__top-descr {
+    @include text(14px, 22px, 400, $colorGrey);
+  }
+  &__top-descr:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  &__bottom-title {
+    margin-top: 30px;
+    margin-bottom: 43px;
+    @include text(24px, 22px, 400, $colorGrey);
+  }
+  &__bottom-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bottom-left {
+    max-width: 268px;
+    margin-right: 10px;
+  }
+  &__bottom-right {
+    max-width: 268px;
+  }
+  &__bottom-span-header {
+    display: block;
+    margin-bottom: 25px;
+    @include text(14px, 22px, 800, $colorGrey);
+  }
+  &__bottom-descr {
+    @include text(14px, 22px, 400, $colorGrey);
+  }
+
+}

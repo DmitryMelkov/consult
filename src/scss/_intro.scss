@@ -1,0 +1,13 @@
+@import "_variables";
+@import "_mixins";
+
+.intro {
+  &__slide {
+    background-image: url('../img/intro-slide-bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+  }
+}

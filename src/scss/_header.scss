@@ -1,0 +1,63 @@
+@import "_variables";
+@import "_mixins";
+
+.header {
+  &__top {
+    background-color: $colorHeaderBg;
+  }
+  &__top-container {
+    padding-top: 45px;
+    padding-bottom: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__descr {
+    @include text(18px, 1.3, 400, $colorGrey);
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+  &__contacts-tel {
+    @include text(31px, 1.5, 800, $colorGrey);
+  }
+  &__bottom {
+    background-color: $colorGrey;
+  }
+  &__bottom-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &__nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__nav-link {
+    padding-right: 15px;
+    margin-right: 15px;
+    @include text(18px, 18px, 400, $colorWhite);
+    border-right: 1px solid $colorWhite;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    &__nav-link:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .header {
+    &__top-container {
+      flex-direction: column;
+    }
+    &__descr {
+      margin-bottom: 20px;
+    }
+  }
+}

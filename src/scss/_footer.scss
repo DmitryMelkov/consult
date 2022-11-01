@@ -1,0 +1,38 @@
+@import "_variables";
+@import "_mixins";
+
+.footer {
+  background-color: $colorGrey;
+  &__container {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left {
+    max-width: 213px;
+  }
+  &__span {
+    @include text(14px, 1.57, 400, $colorWhite);
+  }
+  &__left-link {
+    @include text(14px, 1.57, 400, $colorWhite);
+  }
+  &__center {
+    max-width: 132px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__link {
+    text-decoration: underline;
+    @include text(14px, 1.57, 400, $colorWhite);
+  }
+  &__right {
+    max-width: 217px;
+  }
+
+}
